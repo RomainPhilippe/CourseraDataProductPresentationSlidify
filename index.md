@@ -14,16 +14,16 @@ knit        : slidify::knit2slides
 
 ## The subject
 
-The goal of this small app is to display information about a baseball player according to their name.
+The goal of this small app is to display informations about a baseball player according to their name.
 The informations come from the ***Hitters*** dataset. We have the salary, the number of hits, the league name, the division names ...<br><br>
-We also display a histogram which represents the frequency salary. A red line indicate the salary of the selectioned player. So we can compare the différence of salary 
+We also display a histogram which represents the salaries of the whole set of datas. A red line indicate the salary of the selectioned player, and a green line represents the median salary of the players, so we can compare the difference of salary of the player selected with the other ones.
 
 
 --- .class #id 
 
 ## The input of the app
 
-There is only one input in this app : the names of the player. To do that we load the ISLR package.
+There is only one input in this app : the name of the player. To do that we load the ISLR package.
 
 ```r
 library(ISLR)
@@ -41,19 +41,19 @@ head(substr(playersNames, 2, nchar(playersNames)),20)
 ## [19] "Bruce Bochte"     "Bruce Bochy"
 ```
 
-Then, we compute two small command to extract the name of the player in remove the first character (-). We can see the R script above.
+Then, we compute two small commands to extract the name of the player by removing the first character (-). We can see the R script above.
 
 --- .class #id 
 
 ## The output of the app
 
-There two main output of this app : <br>
+There are two main outputs of this app : <br>
 
 1. A histogram plot
 2. A table
 
-The histogram represents the density salary off all the players. We display two line : one for the median of the salary and the other one is the current salary. <br>
-A table display information about the player like : number of hits, number of runs, the league name and the division name.
+The histogram represents the density of salaries for all the players. We display two lines : one for the median of the salary and the other one containing the current salary. <br>
+A table display informations about the player like the number of hits, number of runs, the league name and the division name.
 
 
 --- .class #id 
@@ -63,5 +63,4 @@ A table display information about the player like : number of hits, number of ru
 
 In the slidify presentation, I use a ***selectInput*** as an input and two differents outputs : an histogram (plotOutput) and a table (dataTableOutput). 
 
-#
-#
+![plot of chunk unnamed-chunk-2](assets/fig/unnamed-chunk-2-1.png) 
